@@ -1,9 +1,7 @@
-<!DOCTYPE html> //lam
+<!DOCTYPE html>
 <html lang="uz">
 
 <head>
-
-   <meta name="google-site-verification" content="0TmdOwfuTq9gV3K36z6rckiLWkeg6aQl1Fffs9hYXUo" />
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -371,7 +369,7 @@ menu.style.display==="block"?"none":"block";
 
 }
 
-/* FILTER MENU */
+/* FILTER MENU */   
 
 function toggleFilter(){
 
@@ -1411,3 +1409,169 @@ console.log("🚀 Bobo Kalonlarimiz sayti to‘liq yuklandi.");
 },3000);
 
 </script>
+
+<script>
+
+/* ======================
+   TRANSLATE DATA
+====================== */
+
+var data = {
+
+uz:{
+title:"Bobo Kalonlarimiz",
+search:"Bobokalon nomini yozing...",
+translate:"Tarjima",
+filter:"Filter",
+dark:"Qorong'u rejim",
+video:"Video to'xtatish",
+names:[
+
+"Alisher Navoiy",
+"Amir Temur",
+"Mirzo Ulug‘bek",
+"Zahiriddin Bobur",
+"Ibn Sino",
+"Muhammad al-Xorazmiy",
+"Abu Rayhon Beruniy",
+"Ahmad al-Farg‘oniy",
+"Imom al-Buxoriy",
+"Imom at-Termiziy",
+"Ahmad Yassaviy",
+"Bahouddin Naqshband",
+"Najmiddin Kubro",
+"Mahmud Qoshg‘ariy",
+"Mahmud Zamaxshariy",
+"Abu Mansur Moturidiy",
+"Al-Farobiy",
+"Abdulla Qodiriy",
+"Cho‘lpon",
+"To'maris",
+"Jaloliddin Manguberdi",
+"Nodira Begim",
+"Uvaysiy",
+"Abdurauf Fitrat",
+"Zulfiya",
+"Saida Zunnunova",
+"Spitaman",
+"Muhammad Yusuf",
+"Mahmudxo‘ja Behbudiy",
+"Islom Karimov"
+
+]
+},
+
+en:{
+title:"Our Great Ancestors",
+search:"Type ancestor name...",
+translate:"Translate",
+filter:"Filter",
+dark:"Dark mode",
+video:"Pause video",
+names:[
+
+"Alisher Navoi",
+"Amir Timur",
+"Mirzo Ulugh Beg",
+"Zahiriddin Babur",
+"Avicenna",
+"Muhammad al Khwarizmi",
+"Al Biruni",
+"Ahmad al Fergani",
+"Imam Bukhari",
+"Imam Tirmidhi",
+"Ahmad Yasawi",
+"Bahauddin Naqshband",
+"Najmuddin Kubra",
+"Mahmud Kashgari",
+"Mahmud Zamakhshari",
+"Abu Mansur Maturidi",
+"Al Farabi",
+"Abdulla Qodiriy",
+"Cholpon",
+"Tomyris",
+"Jalal ad Din Manguberdi",
+"Nodira Begim",
+"Uvaysiy",
+"Abdurauf Fitrat",
+"Zulfiya",
+"Saida Zunnunova",
+"Spitamen",
+"Muhammad Yusuf",
+"Mahmudkhoja Behbudi",
+"Islam Karimov"
+
+]
+},
+
+ru:{
+title:"Наши великие предки",
+search:"Введите имя...",
+translate:"Перевод",
+filter:"Фильтр",
+dark:"Тёмный режим",
+video:"Пауза видео",
+names:[
+
+"Алишер Навои",
+"Амир Темур",
+"Мирзо Улугбек",
+"Захириддин Бабур",
+"Ибн Сина",
+"Мухаммад аль Хорезми",
+"Абу Райхан Бируни",
+"Ахмад аль Фергани",
+"Имам Бухари",
+"Имам Термизи",
+"Ахмад Яссави",
+"Бахауддин Накшбанд",
+"Наджмиддин Кубро",
+"Махмуд Кашгари",
+"Махмуд Замахшари",
+"Абу Мансур Матуриди",
+"Аль Фараби",
+"Абдулла Кадыри",
+"Чулпан",
+"Томирис",
+"Джалолиддин Мангуберди",
+"Нодира Бегим",
+"Увайсий",
+"Абдурауф Фитрат",
+"Зульфия",
+"Саида Зуннунова",
+"Спитамен",
+"Мухаммад Юсуф",
+"Махмудходжа Бехбуди",
+"Ислам Каримов"
+
+]
+}
+
+}
+
+
+
+/* ======================
+   CHANGE LANGUAGE
+====================== */
+
+function changeLang(lang){
+
+var t = data[lang]
+
+document.title = t.title
+
+document.getElementById("search").placeholder = t.search
+
+var names = document.querySelectorAll(".name")
+
+names.forEach(function(el,i){
+
+el.innerText = t.names[i]
+
+})
+
+}
+
+</script>
+
