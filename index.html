@@ -10,6 +10,8 @@
 
 <style>
 
+   
+
 /* BODY */
 
 body{
@@ -49,32 +51,7 @@ z-index:1000;
 
 /* LOGO */
 
-.logo{
-height:70px;
-cursor:pointer;
-transition:0.3s;
-}
 
-.logo:hover{
-transform:scale(1.1);
-}
-
-/* BUTTONS */
-
-#menuBtn,#helpBtn{
-background:#6ad8ff;
-border:none;
-padding:10px 15px;
-border-radius:10px;
-font-size:22px;
-cursor:pointer;
-transition:0.2s;
-}
-
-#menuBtn:hover,#helpBtn:hover{
-transform:scale(1.1);
-background:#4cc4ec;
-}
 
 /* SEARCH AREA */
 
@@ -560,13 +537,13 @@ card.innerHTML=`
 
 /* CLICK WIKIPEDIA */
 
+
 card.onclick=()=>{
 
-window.open(
-"https://uz.wikipedia.org/wiki/"+name.replaceAll(" ","_")
-);
+window.location.href = name.replaceAll(" ","_") + ".html";
 
 };
+
 
 /* IMAGE ANIMATION */
 
@@ -901,9 +878,7 @@ card.innerHTML=`
 
 card.onclick=()=>{
 
-window.open(
-"https://uz.wikipedia.org/wiki/"+name.replaceAll(" ","_")
-);
+window.location.href="Alisher_Navoiy.html?name="+name.replaceAll(" ","_");
 
 };
 
@@ -2843,4 +2818,3 @@ height:180px;
 
 }
 
-</style>
