@@ -728,7 +728,7 @@ Quiz
     </nav>
 
     <!-- MAIN CONTENT -->
-    < class="main-container">
+    <div class="main-container">
         <!-- HOME PAGE -->
         <div id="home" class="page active">
             <!-- SEARCH SECTION -->
@@ -1033,26 +1033,34 @@ Quiz
         card.className = 'card';
 
         // CARD BOSILGANDA WIKIPEDIA OCHILADI
-        card.onclick = () => {
-            let wikiName = person.replaceAll(" ", "_");
-            window.open("https://uz.wikipedia.org/wiki/" + wikiName, "_blank");
-        };
+    card.onclick = () => {
 
-        const category = categories[person];
+    let fileName = person
+        .toLowerCase()
+        .replaceAll(" ", "_")
+        .replaceAll("'", "")
+        .replaceAll("‘", "");
+
+    const pageUrl = fileName + ".html";
+
+    window.location.href = pageUrl;
+};
+
+        const category = categories[person] || 'Noma\'lum';
+        const categoryName = getCategoryName(category);
+        const imageUrl = images[person] || 'placeholder.jpg';
 
         card.innerHTML = `
-            <div class="card-image">
-                <img src="${images[person]}" alt="${person}" loading="lazy">
+            <div class="card-image ">
+                <img src="${imageUrl}" alt="${person}">
             </div>
             <div class="card-info">
-                <div class="card-title">${person}</div>
-                <div class="card-category">${getCategoryName(category)}</div>
+                <h3 class="card-title">${person}</h3>
+                <p class="card-category">${categoryName}</p>
             </div>
         `;
-
         cardGrid.appendChild(card);
     });
-
     // Animate cards
     animateCards();
 }
